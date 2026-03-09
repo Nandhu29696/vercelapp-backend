@@ -32,13 +32,15 @@ db.supplierItems = require("./supplierItems.model")(sequelize, Sequelize)
 db.taxonomy.hasMany(db.spendData, {
   foreignKey: "supplierId",
   sourceKey: "supplierId",
-  as: "spendRecords"
+  as: "spendRecords",
+  constraints: false
 })
 
 db.spendData.belongsTo(db.taxonomy, {
   foreignKey: "supplierId",
   targetKey: "supplierId",
-  as: "taxonomy"
+  as: "taxonomy",
+  constraints: false
 })
 
 module.exports = db

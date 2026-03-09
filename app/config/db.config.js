@@ -2,13 +2,12 @@ const { Sequelize } = require("sequelize");
 const fs = require('fs');
 
 module.exports = {
-  HOST: process.env.DB_HOST,
-  USER: process.env.DB_USER,
-  PASSWORD: process.env.DB_PASSWORD,
-  DB: process.env.DB_DATABASE, 
-  dialect: process.env.DB_DIALECT,
-  ssl: true,
-  port: 3306,
+  HOST: 'localhost',
+  USER: 'postgres',
+  PASSWORD: '1234',
+  DB: 'saas_analytics', 
+  dialect: 'postgres',
+  port: 3307,
   pool: {
     max: 5,
     min: 0,

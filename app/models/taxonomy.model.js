@@ -11,7 +11,8 @@ module.exports = (sequelize, Sequelize) => {
     },
 
     supplierId: {
-      type: Sequelize.STRING 
+      type: Sequelize.STRING,
+      allowNull: false
     },
 
     contracted: {
